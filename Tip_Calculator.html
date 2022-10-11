@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tip Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Tip_Calculator.css">
+        <link rel="icon" type="image/x-icon" href="https://www.reshot.com/preview-assets/icons/7VEZK2S9CD/calculator-7VEZK2S9CD.svg">
+    </head>
+    <body>
+        <div class="tipCalc">
+            <div class="inception">
+                <h1>Tip Calculator</h1>
+                <div class="calc">
+                    <div class="inputs">
+                        <h2>Bill</h2>
+                        <input value="100.00" id="billAmount" type="number">
+                        <h2>Tip %</h2>
+                        <div class="buttonTry">
+                            <button max="100" min="1" id="percentOne">-</button><input value="15" id="tipPercent" type="number"><button id="percentTwo">+</button>
+                        </div>
+                        <h2>Number of people</h2>
+                        <div class="buttonTry">
+                            <button max="1000" min="1" id="peopleOne">-</button><input value="1" id="peopleNum" type="number"><button id="peopleTwo">+</button>
+                        </div>
+                    </div>
+                    <div id="output">
+                        <h2 class="result">Tip amount:</h2>
+                        <span id="hiddenText">per person</span>
+                        <input disabled id="tipAmount">
+                        <h2 class="result">Total bill:</h2>
+                        <span id="hiddenTextTwo">per person</span>
+                        <input disabled id="totalBill">
+                    <button id="calcBtn">Calculate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="Tip_Calculator.js" async defer></script>
+    </body>
+</html>
