@@ -9,7 +9,6 @@ const tipPercent = document.getElementById("tipPercent");
 const billAmount = document.getElementById("billAmount");
 const peopleNum = document.getElementById("peopleNum");
 
-
 let percentCount = 15
 let peopleCount = 1
 
@@ -59,8 +58,8 @@ document.getElementById('calcBtn').onclick = function() {
         document.getElementById('hiddenTextTwo').style.fontSize = "0.9rem";
         document.getElementById("calcBtn").style.marginTop = "18px";
 
-        tipAmount.value = ((Number(billAmount.value) * (Number(tipPercent.value))/100)/peopleCount).toFixed(2)
-        totalBill.value = ((Number(billAmount.value)/peopleCount + Number(tipAmount.value))).toFixed(2)
+        tipAmount.value = ((+billAmount.value * (+tipPercent.value)/100)/peopleCount).toFixed(2)
+        totalBill.value = ((+billAmount.value/peopleCount + +tipAmount.value)).toFixed(2)
 
         totalBill.value = `$${totalBill.value}`
         tipAmount.value = `$${tipAmount.value}`
@@ -69,8 +68,8 @@ document.getElementById('calcBtn').onclick = function() {
         document.getElementById('hiddenTextTwo').style.fontSize = "0rem";
         document.getElementById("calcBtn").style.marginTop = "52px";
 
-        tipAmount.value = (Number(billAmount.value) * (Number(tipPercent.value))/100).toFixed(2)
-        totalBill.value = (Number(billAmount.value) + Number(tipAmount.value)).toFixed(2)
+        tipAmount.value = +billAmount.value * (+tipPercent.value)/100).toFixed(2)
+        totalBill.value = +billAmount.value + +(tipAmount.value.toFixed(2))
 
         totalBill.value = `$${totalBill.value}`
         tipAmount.value = `$${tipAmount.value}`
